@@ -27,7 +27,7 @@ class Assurance{
         $this->Name = $Name;
     }
 
-    public function getLog(){
+    public function getLogo(){
         return $this->Logo;
         
     }
