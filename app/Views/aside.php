@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ========== Tailwind Css ========  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ========== AwesomeFonts Css ========  -->
+    <script src="https://kit.fontawesome.com/d0fb25e48c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../public/assets/css/client/admin.css" / <link
+        href="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.css" rel="stylesheet">
+
+    <!-- select2 -->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- select2 -->
+
+
+</head>
+
+<body>
+
+    <section class=" flex items-center relative">
+
+        <!-- =========== Aside bar =========== -->
+        <aside class="bg-[#343a40] h-[100vh] w-[20%] sm:w-[320px] sm:p-5">
+            <!-- ===== logo ===== -->
+
+            <ul class="p-5 mt-10">
+
+                <h2 class="text-base sm:text-2xl font-bold sm:my-5 text-white">
+                    Asserence
+                </h2>
+                <li class="my-2">
+                    <a href=""
+                        class="text-lg font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-opacity-20">
+                        <img class="h-8 sm:w-8 w-full" src="../../../public/images/assurance.png" alt=""> <span
+                            class="hidden sm:inline-block">Asserences</span></a>
+                </li>
+                <li class="my-2">
+                    <a href=""
+                        class="text-lg font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-indigo-200 bg-opacity-20">
+                        <img class="h-8 sm:w-8 w-full" src="../../../public/images/client.png" alt=""><span
+                            class="hidden sm:inline-block">Clients</span></a>
+                </li>
+
+                <!-- <?php if ($_SESSION["role"] != "admin") { ?> -->
+                <li class="my-2">
+                    <a href=""
+                        class="text-lg font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-indigo-200 bg-opacity-20">
+                        <img class="h-8 sm:w-8 w-full" src="../../../public/images/cars.png" alt=""><span
+                            class="hidden sm:inline-block">Articales</span></a>
+                </li>
+                <li class="my-2">
+                    <a href=""
+                        class="text-lg font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-indigo-200 bg-opacity-20">
+                        <i class="fa-solid "></i>
+                        <img class="h-8 sm:w-8 w-full" src="../../../public/images/fichier.png" alt=""><span
+                            class="hidden sm:inline-block">Claims</span></a>
+                </li>
+
+
+                <!-- <?php } ?> -->
+
+                <li class="my-2">
+                    <a href=""
+                        class="text-lf font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-indigo-200 bg-opacity-20">
+                        <img class="h-8 sm:w-8 w-full" src="../../../public/images/prime.png" alt="">
+                        <span class="hidden sm:inline-block">Primes</span></a>
+                </li>
+
+                <li> <a href=""
+                        class="bg-[#B5CB99] h-10 w-[50%] sm:w-full flex justify-center items-center rounded-lg text-[#0F1A19] font-bold m-auto mt-10"><button
+                            type="button"><i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i></i> <span
+                                class="hidden sm:inline-block">LOG
+                                OUT</span></button></a></li>
+            </ul>
+
+
+
+
+        </aside>
+        <!-- =========== Aside bar =========== -->
+        <!-- =========== Content =========== -->
+        <main class="bg-gray-100 flex-grow h-[100vh] relative">
+            <!-- ============== header =========== -->
