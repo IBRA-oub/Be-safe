@@ -1,6 +1,6 @@
 <?php
  require_once '../aside.php';
-//  require_once '../../Controlles/UserController/displayUser.php';
+ require_once '../../Controllers/AssuranceController/DisplayAssuranceController.php';
 
 
 ?>
@@ -49,32 +49,38 @@
                 </thead>
                 <tbody class="sm:w-full">
 
-                    <!-- <?php 
-            //   foreach($userData as $duser) {
-              ?> -->
+                    <?php 
+              foreach($AssuranceData as $AssurData) {
+              ?>
                     <tr class=" pt-10 sm:pt-0  w-full ">
 
                         <td class=" sm:text-center text-right">
-                            <!-- <?php echo  $duser['userId'] ?></td> -->
+                            <?php echo  $AssurData['Assurance_ID'] ?>
+                        </td>
                         <td class=" sm:text-center text-right">
-                            <!-- <?php echo $duser['username'] ?> -->
+                            <?php echo $AssurData['Name'] ?>
                         </td>
 
                         <td class=" sm:text-center 
                              text-right">
-                            <!-- <?php echo $duser ['gendre'] ?> -->
+                            <div class="flex items-center justify-center">
+                                <?php
+                                $cheminImage = $AssurData['Logo']; 
+                                echo "<img class='w-[50px] h-[50px] ' src='$cheminImage' alt='Logo de l'assurance'>";
+                            ?>
+                            </div>
                         </td>
-                        <td class="  sm:text-center  text-right">
+                        <td class=" sm:text-center text-right">
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controlles/UserController/ipdateUser.php?user_id=<?= $duser ['userId'];?>">
+                                    href="../../Controllers/AssuranceController/D?Assurence_ID=<?= $AssurData ['Assurance_ID'];?>">
                                     <i class="fa-solid fa-pen " style="color:#186F65"></i></a>
 
 
                             </button>
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controlles/UserController/deleteUser.php?user_id=<?= $duser ['userId'];?>"><i
+                                    href="../../Controllers/AssuranceController/DeleteAssuranceController.php?Assurence_ID=<?= $AssurData ['Assurance_ID'];?>"><i
                                         class="fa-solid fa-trash " style="color:#186F65"></i></a>
 
                             </button>
@@ -83,9 +89,9 @@
                         </td>
 
                     </tr>
-                    <!-- <?php 
-            //   }
-              ?> -->
+                    <?php 
+              }
+              ?>
 
                 </tbody>
             </table>
@@ -99,40 +105,33 @@
                         <th></th>
                         <th></th>
                         <th></th>
-                        <th></th>
+
                     </tr>
                 </thead>
                 <tbody class="block  w-full">
-                    <!-- <?php 
-            //   foreach($userData as $duser) {
-              ?> -->
+                    <?php 
+              foreach($AssuranceData as $AssurData) {
+              ?>
                     <tr class="block pt-10 sm:pt-0   w-full ">
 
                         <td data-label="id"
                             class="border-b before:content-['id']  before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 sm:before:hidden sm:text-center block    text-right">
-                            <?php echo $duser ['userId'] ?></td>
-                        <td data-label="username" class="border-b before:content-['username'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
+                            <?php echo  $AssurData['Assurance_ID'] ?>
+                        </td>
+                        <td data-label="Name" class="border-b before:content-['Name'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo $duser ['username'] ?>
+                            <?php echo  $AssurData['Name'] ?>
                         </td>
 
-                        <!-- <?php
-                        // Récupérer le rôle de l'utilisateur
-                        $userRole = $displayRoleofuser->displaRoleofuser($duser['userId']);
-                        ?>
 
-                    <?php foreach ($userRole as $role){
-                        ?> -->
-                        <td data-label="Role" class="border-b before:content-['Role'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 sm:before:hidden block  sm:text-center 
-                            text-right">
-                            <!-- <?php echo $role['roleName'] ?> -->
-                        </td>
-                        <!-- <?php
-                }
-                ?> -->
-                        <td data-label="gendre" class="border-b before:content-['Gendre'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2  sm:before:hidden block sm:text-center 
+                        <td data-label="Logo" class="border-b before:content-['Logo'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2  sm:before:hidden block sm:text-center 
                              text-right">
-                            <!-- <?php echo $duser ['gendre'] ?> -->
+                            <div class="flex items-center justify-center">
+                                <?php
+                                $cheminImage = $AssurData['Logo']; 
+                                echo "<img class='w-[50px] h-[50px] ' src='$cheminImage' alt='Logo de l'assurance'>";
+                            ?>
+                            </div>
                         </td>
                         <td data-label="ACtion"
                             class="border-b before:content-['action'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2  sm:before:hidden  sm:text-center block    text-right">
@@ -152,9 +151,9 @@
                         </td>
 
                     </tr>
-                    <!-- <?php 
-            //   }
-              ?> -->
+                    <?php 
+              }
+              ?>
 
                 </tbody>
             </table>

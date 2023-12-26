@@ -27,13 +27,13 @@ class ServiceAssurance extends DataBase implements InterfaceAssurance{
 
         $pdo = $this->connection();
        
-        $sql = "DELETE FROM assurance WHERE userId = :id";
+        $sql = "DELETE FROM assurance WHERE Assurance_ID = :id";
        
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':id',$id);
        
         $DeletASSur= $stmt->execute();
-        return $ $DeletASSur;
+        return  $DeletASSur;
        
        }
 

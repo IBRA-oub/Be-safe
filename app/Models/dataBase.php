@@ -17,7 +17,7 @@ class DataBase{
             // set the PDO error mode to exception
             $cnx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            echo "Connected successfully";
+            // echo "Connected successfully";
             return $cnx;
 
             } catch(PDOException $e) {
