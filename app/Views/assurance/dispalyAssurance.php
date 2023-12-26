@@ -72,8 +72,7 @@
                         </td>
                         <td class=" sm:text-center text-right">
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
-                                <a
-                                    href="../../Controllers/AssuranceController/D?Assurence_ID=<?= $AssurData ['Assurance_ID'];?>">
+                                <a href="updateAssurance.php?Assurance_ID=<?= $AssurData ['Assurance_ID'];?>">
                                     <i class="fa-solid fa-pen " style="color:#186F65"></i></a>
 
 
