@@ -17,7 +17,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //for checking if the image was uploaded
     $result = move_uploaded_file($tmpImage , $Logo);
 
-    $Assurence = new Assurance
+    try{
+        
+    $Assurence = new Assurance($Name,$Logo);
+    
+    $serviceAssur = new ServiceAssurance();
+    $serviceAssur->addAssurance($Assurence);
+    
+    header('location:../../Views/assurance/dispalyAssurance.php');
+    
+    }catch(PDOException $e){
+        
+        die($e->getMessage());
+    }
     
 }
 

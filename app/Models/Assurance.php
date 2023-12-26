@@ -6,8 +6,8 @@ class Assurance{
     private $Name; 
     private $Logo;
     
-    public function __construct($id, $Name, $Logo){
-        $this->id = $id;
+    public function __construct( $Name, $Logo){
+        
         $this->Name = $Name;
         $this->Logo = $Logo;
     }
