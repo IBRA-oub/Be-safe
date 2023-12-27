@@ -66,7 +66,7 @@
 
 
                 <li class="my-2">
-                    <a href=""
+                    <a href="../Primes/displayPrime.php"
                         class="text-lf font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-indigo-200 bg-opacity-20">
                         <img class="h-8 sm:w-8 w-full" src="../../../public/images/prime.png" alt="">
                         <span class="hidden sm:inline-block">Primes</span></a>

@@ -6,9 +6,9 @@ class Prime{
     private $Date;
     private $Claim_ID;
 
-    public function __construct($Premium_ID,$Amount,$Date,$Claim_ID){
+    public function __construct($Amount,$Date,$Claim_ID){
         
-        $this->Pemium_ID = $Premium_ID;
+      
         $this->Amount = $Amount;
         $this->Date = $Date;
         $this->Claim_ID = $Claim_ID;
