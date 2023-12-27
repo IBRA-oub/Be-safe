@@ -1,6 +1,6 @@
 <?php
  require_once '../aside.php';
- require_once '../../Controllers/ClientController/DisplayClientController.php';
+ require_once '../../Controllers/ArticleController/DisplayArticleController.php';
 
 
 ?>
@@ -22,7 +22,7 @@
 
 
                 <button class="bg-[#212529] text-white w-[160px] h-[50px] rounded-md" id="addBank">
-                    <a href="addClients.php">Add Article</a>
+                    <a href="addArticle.php">Add Article</a>
                 </button>
             </div>
         </div>
@@ -44,33 +44,33 @@
                 <tbody class="sm:w-full">
 
                     <?php 
-              foreach($clientData as $ClienData) {
+              foreach($ArticleData as $ArtiData) {
               ?>
                     <tr class=" pt-10 sm:pt-0  w-full ">
 
                         <td class=" sm:text-center text-right">
-                            <?php echo  $ClienData['Article_ID'] ?>
+                            <?php echo  $ArtiData['Article_ID'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
-                            <?php echo $ClienData['Title'] ?>
+                            <?php echo $ArtiData['Title'] ?>
                         </td>
 
                         <td class=" sm:text-center text-right">
-                            <?php echo $ClienData['Desciption'] ?>
+                            <?php echo $ArtiData['Description'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
-                            <?php echo $ClienData['Date'] ?>
+                            <?php echo $ArtiData['Date'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
-                                <a href="updateClients.php?Article_ID=<?= $ClienData ['Article_ID'];?>">
+                                <a href="updateArticle.php?Article_ID=<?= $ArtiData['Article_ID'];?>">
                                     <i class="fa-solid fa-pen " style="color:#186F65"></i></a>
 
 
                             </button>
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controllers/ClientController/DeleteClientController.php?Article_ID=<?= $ClienData ['Article_ID'];?>"><i
+                                    href="../../Controllers/ArticleController/DeleteArticleController.php?Article_ID=<?= $ArtiData ['Article_ID'];?>"><i
                                         class="fa-solid fa-trash " style="color:#186F65"></i></a>
 
                             </button>
@@ -102,38 +102,38 @@
                 </thead>
                 <tbody class="block  w-full">
                     <?php 
-              foreach($clientData as $ClienData) {
+              foreach($ArticleData as $ClienData) {
               ?>
                     <tr class="block pt-10 sm:pt-0   w-full ">
 
                         <td data-label="id"
                             class="border-b before:content-['id']  before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 sm:before:hidden sm:text-center block    text-right">
-                            <?php echo  $ClienData['Article_ID'] ?>
+                            <?php echo  $ArtiData['Article_ID'] ?>
                         </td>
                         <td data-label="Title" class="border-b before:content-['Title'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo  $ClienData['Title'] ?>
+                            <?php echo  $ArtiData['Title'] ?>
                         </td>
                         <td data-label="Description" class="border-b before:content-['Description'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo  $ClienData['Description'] ?>
+                            <?php echo  $ArtiData['Description'] ?>
                         </td>
                         <td data-label="Date" class="border-b before:content-['Date'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo $ClienData['Date'] ?>
+                            <?php echo $ArtiData['Date'] ?>
                         </td>
 
                         <td data-label="ACtion"
                             class="border-b before:content-['action'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2  sm:before:hidden  sm:text-center block    text-right">
                             <button class="bg-slate-900 text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../../app/views/users/updateUser.php?Article_ID=<?= $ClienData ['Article_ID'];?>">
+                                    href="../../../app/views/users/updateUser.php?Article_ID=<?= $ArtiData ['Article_ID'];?>">
                                     <i class="fa-solid fa-pen"></i></a>
 
                             </button>
                             <button class="bg-slate-900 text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controlles/UserController/deleteUser.php?Article_ID=<?= $ClienData ['Article_ID'] ;?>"><i
+                                    href="../../Controlles/UserController/deleteUser.php?Article_ID=<?= $ArtiData ['Article_ID'] ;?>"><i
                                         class="fa-solid fa-trash"></i></a>
 
                             </button>

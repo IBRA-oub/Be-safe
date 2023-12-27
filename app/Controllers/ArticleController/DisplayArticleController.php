@@ -4,9 +4,9 @@
 require_once('../../Services/ArticleService/InterfaceArticle.php');
 require_once('../../Services/ArticleService/ServiceArticle.php');
 
-$displayAssur = new ServiceAssurance();
+$displayArticle = new ServiceArticle();
 
-$AssuranceData = $displayAssur->displayAssurance();
+$ArticleData = $displayArticle->displayArticle();
 
 
 ?>
