@@ -20,12 +20,6 @@
 
             <div>
 
-                <!-- <a href="#" class="bg-[#212529] text-white w-[160px] h-[50px] rounded-md">
-                    <span data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-                        class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                        Ajouter
-                    </span>
-                </a> -->
                 <button class="bg-[#212529] text-white w-[160px] h-[50px] rounded-md" id="addBank">
                     <a href="addAssurance.php">Add Assurance</a>
                 </button>
@@ -168,7 +162,9 @@
 <!-- ========== overlay ================= -->
 
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.js"></script>
 
 <script>
 $(document).ready(function() {

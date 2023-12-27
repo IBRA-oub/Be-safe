@@ -5,7 +5,7 @@ class AssurClient{
     private $userId;
     private $Assurance_ID;
     
-    public function __construct( $userId, $Assurance_ID){
+    public function __construct($userId, $Assurance_ID){
         $this->userId = $userId;
         $this->Assurance_ID = $Assurance_ID;
     }
