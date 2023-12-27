@@ -9,7 +9,7 @@ class Claim{
 
 
     public function __construct($Descreption, $Date, $Article_ID){
-        $this->Description = $Descreption;
+        $this->Descreption = $Descreption;
         $this->Date = $Date;
         $this->Article_ID = $Article_ID;
     }
@@ -19,7 +19,7 @@ class Claim{
     }
  
     public function setClaim_ID($Claim_ID){
-        $this->id = $Claim_ID;
+        $this->Claim_ID = $Claim_ID;
     }
 
     public function getDescreption(){

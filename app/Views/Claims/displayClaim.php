@@ -1,6 +1,6 @@
 <?php
  require_once '../aside.php';
- require_once '../../Controllers/ArticleController/DisplayArticleController.php';
+ require_once '../../Controllers/ClaimController/DisplayClaimController.php';
 
 
 ?>
@@ -22,7 +22,7 @@
 
 
                 <button class="bg-[#212529] text-white w-[160px] h-[50px] rounded-md" id="addBank">
-                    <a href="addArticle.php">Add Article</a>
+                    <a href="addClaim.php">Add Claim</a>
                 </button>
             </div>
         </div>
@@ -35,7 +35,6 @@
                 <thead class="  sm:w-full">
                     <tr class="bg-[#212529] text-white h-[60px]">
                         <th class="">ID</th>
-                        <th class="">Title</th>
                         <th class="">Description</th>
                         <th class="">Date</th>
                         <th class="">Actions</th>
@@ -44,33 +43,31 @@
                 <tbody class="sm:w-full">
 
                     <?php 
-              foreach($ArticleData as $ArtiData) {
+              foreach($claimData as $claiData) {
               ?>
                     <tr class=" pt-10 sm:pt-0  w-full ">
 
                         <td class=" sm:text-center text-right">
-                            <?php echo  $ArtiData['Article_ID'] ?>
-                        </td>
-                        <td class=" sm:text-center text-right">
-                            <?php echo $ArtiData['Title'] ?>
+                            <?php echo  $claiData['Claim_ID'] ?>
                         </td>
 
+
                         <td class=" sm:text-center text-right">
-                            <?php echo $ArtiData['Description'] ?>
+                            <?php echo $claiData['Descreption'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
-                            <?php echo $ArtiData['Date'] ?>
+                            <?php echo $claiData['Date'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
-                                <a href="updateArticle.php?Article_ID=<?= $ArtiData['Article_ID'];?>">
+                                <a href="updateClaim.php?Claim_ID=<?= $claiData['Claim_ID'];?>">
                                     <i class="fa-solid fa-pen " style="color:#186F65"></i></a>
 
 
                             </button>
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controllers/ArticleController/DeleteArticleController.php?Article_ID=<?= $ArtiData ['Article_ID'];?>"><i
+                                    href="../../Controllers/ClaimController/DeleteClaimController.php?Claim_ID=<?= $claiData ['Claim_ID'];?>"><i
                                         class="fa-solid fa-trash " style="color:#186F65"></i></a>
 
                             </button>
@@ -93,7 +90,7 @@
                     <tr>
                         <th></th>
                         <th></th>
-                        <th></th>
+
                         <th></th>
                         <th></th>
 
@@ -102,37 +99,34 @@
                 </thead>
                 <tbody class="block  w-full">
                     <?php 
-              foreach($ArticleData as $ClienData) {
+              foreach($claiData as $claiData) {
               ?>
                     <tr class="block pt-10 sm:pt-0   w-full ">
 
                         <td data-label="id"
                             class="border-b before:content-['id']  before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 sm:before:hidden sm:text-center block    text-right">
-                            <?php echo  $ArtiData['Article_ID'] ?>
+                            <?php echo  $claiData['Claim_ID'] ?>
                         </td>
-                        <td data-label="Title" class="border-b before:content-['Title'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
-                             text-right">
-                            <?php echo  $ArtiData['Title'] ?>
-                        </td>
+
                         <td data-label="Description" class="border-b before:content-['Description'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo  $ArtiData['Description'] ?>
+                            <?php echo  $claiData['Descreption'] ?>
                         </td>
                         <td data-label="Date" class="border-b before:content-['Date'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo $ArtiData['Date'] ?>
+                            <?php echo $claiData['Date'] ?>
                         </td>
 
                         <td data-label="ACtion"
                             class="border-b before:content-['action'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2  sm:before:hidden  sm:text-center block    text-right">
                             <button class="bg-slate-900 text-white w-[35px] h-[35px] rounded-md">
-                                <a href="updateArticle.php?Article_ID=<?= $ArtiData ['Article_ID'];?>">
+                                <a href="updateClaim.php?Claim_ID=<?= $claiData ['Claim_ID'];?>">
                                     <i class="fa-solid fa-pen"></i></a>
 
                             </button>
                             <button class="bg-slate-900 text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controllers/ArticleController/DeleteArticleController.php?Article_ID=<?= $ArtiData ['Article_ID'] ;?>"><i
+                                    href="../../Controllers/ClaimController/DeleteClaimController.php?Claim_ID=<?= $claiData ['Claim_ID'] ;?>"><i
                                         class="fa-solid fa-trash"></i></a>
 
                             </button>

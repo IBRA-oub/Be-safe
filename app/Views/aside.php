@@ -55,7 +55,7 @@
                             class="hidden sm:inline-block">Articales</span></a>
                 </li>
                 <li class="my-2">
-                    <a href=""
+                    <a href="../Claims/displayClaim.php"
                         class="text-lg font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-indigo-200 bg-opacity-20">
                         <i class="fa-solid "></i>
                         <img class="h-8 sm:w-8 w-full" src="../../../public/images/fichier.png" alt=""><span
