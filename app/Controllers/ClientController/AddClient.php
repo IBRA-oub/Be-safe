@@ -15,9 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $Adress = $_POST['Adress'];
     $Number = $_POST['Number'];
     $Assurance_ID = $_POST['Assurance_ID'];
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
+  
 
     try{
         $Client = new Client($FullName,$CIN,$Adress,$Number);

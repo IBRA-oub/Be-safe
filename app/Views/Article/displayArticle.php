@@ -22,7 +22,7 @@
 
 
                 <button class="bg-[#212529] text-white w-[160px] h-[50px] rounded-md" id="addBank">
-                    <a href="addClients.php">Add CLient</a>
+                    <a href="addClients.php">Add Article</a>
                 </button>
             </div>
         </div>
@@ -35,12 +35,9 @@
                 <thead class="  sm:w-full">
                     <tr class="bg-[#212529] text-white h-[60px]">
                         <th class="">ID</th>
-                        <th class="">FullName</th>
-                        <th class="">CIN</th>
-                        <th class="">Adress</th>
-                        <th class="">Number</th>
-
-
+                        <th class="">Title</th>
+                        <th class="">Description</th>
+                        <th class="">Date</th>
                         <th class="">Actions</th>
                     </tr>
                 </thead>
@@ -52,31 +49,28 @@
                     <tr class=" pt-10 sm:pt-0  w-full ">
 
                         <td class=" sm:text-center text-right">
-                            <?php echo  $ClienData['userId'] ?>
+                            <?php echo  $ClienData['Article_ID'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
-                            <?php echo $ClienData['FullName'] ?>
+                            <?php echo $ClienData['Title'] ?>
                         </td>
 
                         <td class=" sm:text-center text-right">
-                            <?php echo $ClienData['CIN'] ?>
+                            <?php echo $ClienData['Desciption'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
-                            <?php echo $ClienData['Adress'] ?>
-                        </td>
-                        <td class=" sm:text-center text-right">
-                            <?php echo $ClienData['Number'] ?>
+                            <?php echo $ClienData['Date'] ?>
                         </td>
                         <td class=" sm:text-center text-right">
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
-                                <a href="updateClients.php?userId=<?= $ClienData ['userId'];?>">
+                                <a href="updateClients.php?Article_ID=<?= $ClienData ['Article_ID'];?>">
                                     <i class="fa-solid fa-pen " style="color:#186F65"></i></a>
 
 
                             </button>
                             <button class="bg-[#212529] text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controllers/ClientController/DeleteClientController.php?userId=<?= $ClienData ['userId'];?>"><i
+                                    href="../../Controllers/ClientController/DeleteClientController.php?Article_ID=<?= $ClienData ['Article_ID'];?>"><i
                                         class="fa-solid fa-trash " style="color:#186F65"></i></a>
 
                             </button>
@@ -102,7 +96,7 @@
                         <th></th>
                         <th></th>
                         <th></th>
-                        <th></th>
+
 
                     </tr>
                 </thead>
@@ -114,37 +108,32 @@
 
                         <td data-label="id"
                             class="border-b before:content-['id']  before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 sm:before:hidden sm:text-center block    text-right">
-                            <?php echo  $ClienData['userId'] ?>
+                            <?php echo  $ClienData['Article_ID'] ?>
                         </td>
-                        <td data-label="FullName" class="border-b before:content-['FullName'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
+                        <td data-label="Title" class="border-b before:content-['Title'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo  $ClienData['FullName'] ?>
+                            <?php echo  $ClienData['Title'] ?>
                         </td>
-                        <td data-label="CIN" class="border-b before:content-['CIN'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
+                        <td data-label="Description" class="border-b before:content-['Description'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo  $ClienData['CIN'] ?>
+                            <?php echo  $ClienData['Description'] ?>
                         </td>
-                        <td data-label="Adress" class="border-b before:content-['Adress'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
+                        <td data-label="Date" class="border-b before:content-['Date'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
                              text-right">
-                            <?php echo $ClienData['Adress'] ?>
+                            <?php echo $ClienData['Date'] ?>
                         </td>
-                        <td data-label="Number" class="border-b before:content-['Number'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2 block  sm:before:hidden sm:text-center 
-                             text-right">
-                            <?php echo  $ClienData['Number'] ?>
-                        </td>
-
-
 
                         <td data-label="ACtion"
                             class="border-b before:content-['action'] before:absolute before:left-0 before:w-1/2 before:font-bold before:text-left before:pl-2  sm:before:hidden  sm:text-center block    text-right">
                             <button class="bg-slate-900 text-white w-[35px] h-[35px] rounded-md">
-                                <a href="../../../app/views/users/updateUser.php?userId=<?= $ClienData ['userId'];?>">
+                                <a
+                                    href="../../../app/views/users/updateUser.php?Article_ID=<?= $ClienData ['Article_ID'];?>">
                                     <i class="fa-solid fa-pen"></i></a>
 
                             </button>
                             <button class="bg-slate-900 text-white w-[35px] h-[35px] rounded-md">
                                 <a
-                                    href="../../Controlles/UserController/deleteUser.php?userId=<?= $ClienData ['userId'] ;?>"><i
+                                    href="../../Controlles/UserController/deleteUser.php?Article_ID=<?= $ClienData ['Article_ID'] ;?>"><i
                                         class="fa-solid fa-trash"></i></a>
 
                             </button>

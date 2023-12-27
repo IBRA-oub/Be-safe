@@ -3,13 +3,13 @@ require_once('../../Models/Assurance.php');
 require_once('../../Services/AssuranceService/InterfaceAssurance.php');
 require_once('../../Services/AssuranceService/ServiceAssurance.php');
 
-echo'ff';
+
 
 
 
 if(isset($_POST['update'])){
     
-    echo'bb';  
+   
     $Assurance_ID = $_POST['Assurance_ID'];
     $Name = $_POST['Name'];
     

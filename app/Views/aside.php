@@ -49,7 +49,7 @@
 
 
                 <li class="my-2">
-                    <a href=""
+                    <a href="../Article/displayArticle.php"
                         class="text-lg font-medium w-[full] rounded-md h-[60px] text-white flex items-center p-5 group hover:text-red-500 bg-indigo-200 bg-opacity-20">
                         <img class="h-8 sm:w-8 w-full" src="../../../public/images/cars.png" alt=""><span
                             class="hidden sm:inline-block">Articales</span></a>
